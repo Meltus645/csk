@@ -19,7 +19,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # custom apps
+    'base.apps.BaseConfig',
     
+    #django built-in
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
