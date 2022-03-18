@@ -1,4 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Home Page</h1>
+    <h1>CSK HOME</h1>
+    <hr />
+    <div class ="grid">
+        <div class ="grid-cells-1">
+            <h3>Browse topics</h3>
+            <ul class ="items">
+                <li><a href ="{% url 'home' %}">All</a></li>
+                {% for topic in topics%}
+                <li><a href ="{% url 'home' %}?q={{topic.name}}">{{topic.name}}</a></li>    
+                {% endfor %}
+            <ul>
+        </div>
+
+        <div class ="grid-cells-3"></div>
+    </div>
 {% endblock content %}
