@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Enter Chat</h2>
+<hr/>
+<style>
+    .grid{
+        display:grid;
+        grid-template-columns: 3fr 1fr;
+    }
+</style>
+
+<div class ="grid">
+    <div>
+        <h3>{{room.name}}</h3>
+        <div>{{room.description}}</div>
+        <div>
+            <h3>Discussion</h3>
+        </div>
+    </div>
+    <div>
+        <h3>Partcipants</h3>
+        {% for partcipant in partcipants %}
+            <p>@{{partcipant.username}}</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
